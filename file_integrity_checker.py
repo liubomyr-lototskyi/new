@@ -178,33 +178,6 @@ class FileIntegrityChecker:
             print(f"\n✓ Updated baseline for {updated_count} file(s)")
 
 
-def print_usage():
-    """Print usage information."""
-    print("""
-File Integrity Checker - Usage:
-
-  python file_integrity_checker.py add <file/directory> [...]
-      Add files or directories to monitoring
-      
-  python file_integrity_checker.py check
-      Check integrity of all monitored files
-      
-  python file_integrity_checker.py list
-      List all monitored files
-      
-  python file_integrity_checker.py remove <file> [...]
-      Remove files from monitoring
-      
-  python file_integrity_checker.py update [file ...]
-      Update baseline hash for files (all if none specified)
-
-Examples:
-  python file_integrity_checker.py add /etc/passwd /etc/shadow
-  python file_integrity_checker.py add ~/important_docs/
-  python file_integrity_checker.py check
-  python file_integrity_checker.py update /etc/passwd
-    """)
-
 
 def main():
     if len(sys.argv) < 2:
@@ -247,5 +220,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
