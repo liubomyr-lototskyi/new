@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-File Integrity Checker
-Cybersecurity tool to monitor file integrity by tracking file hashes.
-Detects unauthorized modifications, additions, or deletions.
+rized modifications, additions, or deletions.
 """
 
 import hashlib
@@ -250,3 +247,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
