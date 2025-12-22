@@ -2,7 +2,7 @@
 """
 File Integrity Checker
 A simple cybersecurity tool to monitor file integrity by tracking file hashes.
-Detects unauthorized modifications, additions, or deletions.
+Detects unauthorized file modifications, additions, or deletions.
 """
 
 import hashlib
@@ -193,7 +193,7 @@ File Integrity Checker - Usage:
       Check integrity of all monitored files
       
   python file_integrity_checker.py list
-      List all monitored files
+      List all of monitored files
       
   python file_integrity_checker.py remove <file> [...]
       Remove files from monitoring
@@ -248,4 +248,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
