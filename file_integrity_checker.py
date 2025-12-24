@@ -18,16 +18,7 @@ class FileIntegrityChecker:
         self.db_file = db_file
         self.database = self._load_database()
     
-    def _load_database(self):
-        """Load the integrity database from file."""
-        if os.path.exists(self.db_file):
-            try:
-                with open(self.db_file, 'r') as f:
-                    return json.load(f)
-            except json.JSONDecodeError:
-                print(f"Warning: Corrupt database file. Starting fresh.")
-                return {}
-        return {}
+
     
     def _save_database(self):
         """Save the integrity database to file."""
@@ -250,4 +241,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
