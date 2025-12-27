@@ -63,6 +63,11 @@ class FileIntegrityChecker:
         self._save_database()
         print(f"\n✓ Added {added_count} file(s) to monitoring")
         return added_count
+        
+    def _add_file(self, filepath):
+        """Add a single file to the database."""
+        file_str = str(filepath.absolute())
+        file_hash = self._calculate_hash(file_str)
 
 
         if file_hash:
@@ -299,6 +304,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
